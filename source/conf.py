@@ -24,8 +24,6 @@ author = 'Rutul Pandya'
 # The full version, including alpha/beta/rc tags
 release = 'v1'
 
-#Added line
-master_doc = 'index'
 
 # -- General configuration ---------------------------------------------------
 
