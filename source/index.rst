@@ -9,8 +9,8 @@ Welcome to i3sdk's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-   script1
 
+   script1.rst
 
 
 Indices and tables
