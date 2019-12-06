@@ -25,6 +25,23 @@ author = 'Rutul Pandya'
 release = 'v1'
 
 
+
+#Add this line -----------------------------------------------------------------
+master_doc = 'index'
+
+
+#Theme template-------------------------------------------------------
+
+import sphinx_rtd_theme
+
+extensions = [
+    ...
+    'sphinx_rtd_theme',
+]
+
+html_theme = "sphinx_rtd_theme"
+
+
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
