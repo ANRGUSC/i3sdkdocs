@@ -28,9 +28,19 @@ release = 'v1'
 #Add this line -----------------------------------------------------------------
 master_doc = 'index'
 
+# extensions = [
+#     'sphinx.ext.autodoc',
+# ]
+
+
+
+import sphinx_rtd_theme
+
 extensions = [
-    'sphinx.ext.autodoc',
+    'sphinx_rtd_theme',
 ]
+
+html_theme = "sphinx_rtd_theme"
 
 #Theme Template------------------------------------------------------------------------
 # html_theme = "sphinx_rtd_theme"
