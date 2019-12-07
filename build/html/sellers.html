@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="python" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="python" > <!--<![endif]-->
@@ -9,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; i3sdk v1 documentation</title>
+  <title>FOR SELLERS &mdash; i3sdk v1 documentation</title>
   
 
   
@@ -34,8 +33,9 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="#" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="FOR BUYERS" href="buyers.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,12 +80,12 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html"><strong>I3 SDK Documentation</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="req.html">REQUIREMENTS AND INSTALLATION</a></li>
 <li class="toctree-l1"><a class="reference internal" href="i3market.html">I3 Marketplace</a></li>
 <li class="toctree-l1"><a class="reference internal" href="buyers.html">FOR BUYERS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sellers.html">FOR SELLERS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">FOR SELLERS</a></li>
 </ul>
 
             
@@ -131,12 +131,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Index</li>
+      <li>FOR SELLERS</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/sellers.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -148,11 +150,42 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="for-sellers">
+<h1>FOR SELLERS<a class="headerlink" href="#for-sellers" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">In the pub script, there’s nothing related to the seller himself. It was really the seller’s device that’s publishing, the device has a name, credential and permission. But of course, the devices are not alive, so the seller has to do everything for them.</div>
+</div>
+<div class="line-block">
+<div class="line">1. MQTT username and topic name: Provide the <strong>FULL</strong> device name in connect request, also the FULL topic name. Don’t use wildcard for topic subscription. In the future we’ll allow sub-topic management, where if you buy a topic, you’ll buy all its sub-topics.</div>
+</div>
+<div class="line-block">
+<div class="line">2. In mqtt connect request, provide your device password if this device is registered using api key. Note that it is the original password that you should provide, not the hashed password or something else. We’ll take care of the “de-hash” for you. Of course, we can’t know your password directly from database, but we can check if the password that you provided in publishing is indeed correct.</div>
+</div>
+<blockquote>
+<div><img alt="_images/pub1.PNG" src="_images/pub1.PNG" />
+</div></blockquote>
+<div class="line-block">
+<div class="line">Input the password created while creating device. You can also update it from Edit Device</div>
+</div>
+<blockquote>
+<div><img alt="_images/pub2.PNG" src="_images/pub2.PNG" />
+</div></blockquote>
+<div class="line-block">
+<div class="line">3. If your device is registered by an asymmetric key pair and you’ve provided your public key to I3, generate a Json Web Token claim and sign it with your private key (paired with the public key you provided to I3). Signature has to be performed using RS256, and right now only supports limited jwt fields. Specify an expire time for your token, after which it will be invalid for authentication. But no auto disconnection is performed when your token expires (you just can’t use this token to connect again). Directly use the token as the password for authentication.</div>
+</div>
+<div class="line-block">
+<div class="line">In order to generate the public and private key</div>
+<div class="line">There’s no addition information you need to provide, such as how you registered your device. We’ll take care of everything, you just need to provide the necessary basic information.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Please don’t use your private key string as the password!</strong></div>
+</div>
+<div class="line-block">
+<div class="line">If you find the above process confusing, please check how AWS uses two asymmetric key pairs to handle SSH authentications.</div>
+</div>
+<div class="line-block">
+<div class="line">(You registered your virtual machine instance by providing your public key, and SSH encryption uses AWS’s public key to encrypt the message that has your private key digital signature)</div>
+</div>
 </div>
 
 
@@ -160,6 +193,13 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="buyers.html" class="btn btn-neutral float-left" title="FOR BUYERS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

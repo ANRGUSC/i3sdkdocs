@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="python" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="python" > <!--<![endif]-->
@@ -9,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; i3sdk v1 documentation</title>
+  <title>I3 SDK Documentation &mdash; i3sdk v1 documentation</title>
   
 
   
@@ -34,8 +33,10 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="#" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="REQUIREMENTS AND INSTALLATION" href="req.html" />
+    <link rel="prev" title="Welcome to I3SDK&#39;s documentation!" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,8 +81,11 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="intro.html"><strong>I3 SDK Documentation</strong></a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>I3 SDK Documentation</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="req.html">REQUIREMENTS AND INSTALLATION</a></li>
 <li class="toctree-l1"><a class="reference internal" href="i3market.html">I3 Marketplace</a></li>
 <li class="toctree-l1"><a class="reference internal" href="buyers.html">FOR BUYERS</a></li>
@@ -131,12 +135,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Index</li>
+      <li><strong>I3 SDK Documentation</strong></li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/intro.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -148,11 +154,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="i3-sdk-documentation">
+<h1><strong>I3 SDK Documentation</strong><a class="headerlink" href="#i3-sdk-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">MQTT is a machine-to-machine (M2M)/ “Internet of Things” connectivity protocol. MQTT stands for Message Queuing Telemetry Transport. It is a publish-subscribe-based messaging protocol. It works on top of the TCP/IP protocol.</div>
+</div>
+<div class="line-block">
+<div class="line">The important terminologies in MQTT are as follows:</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Publisher</strong>: The one which publishes messages to the outer world.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Subscriber</strong>: The one which receives messages that are intended for it.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Client</strong>: A client can be either publisher or subscriber or both. That is a client publish a message and receive another message at the same time.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Server/Broker</strong>: The one receives the messages published by the publisher first, even before the subscriber. Then the server publishes the messages to the subscribers after filtering the messages. Both the names server and broker mean the same entity.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Topic</strong>: An UTF-8 string used by the clients and servers to send and receive messages.</div>
+</div>
+</div>
 </div>
 
 
@@ -160,6 +187,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="req.html" class="btn btn-neutral float-right" title="REQUIREMENTS AND INSTALLATION" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to I3SDK&#39;s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

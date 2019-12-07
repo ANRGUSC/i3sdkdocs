@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="python" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="python" > <!--<![endif]-->
@@ -9,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; i3sdk v1 documentation</title>
+  <title>I3 Marketplace &mdash; i3sdk v1 documentation</title>
   
 
   
@@ -34,8 +33,10 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="#" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="FOR BUYERS" href="buyers.html" />
+    <link rel="prev" title="REQUIREMENTS AND INSTALLATION" href="req.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,10 +81,10 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html"><strong>I3 SDK Documentation</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="req.html">REQUIREMENTS AND INSTALLATION</a></li>
-<li class="toctree-l1"><a class="reference internal" href="i3market.html">I3 Marketplace</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">I3 Marketplace</a></li>
 <li class="toctree-l1"><a class="reference internal" href="buyers.html">FOR BUYERS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sellers.html">FOR SELLERS</a></li>
 </ul>
@@ -131,12 +132,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Index</li>
+      <li>I3 Marketplace</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/i3market.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -148,11 +151,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="i3-marketplace">
+<h1>I3 Marketplace<a class="headerlink" href="#i3-marketplace" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">Devices in I3 marketplace are registered under hubs, and also require valid input when creating. Invalid input will redirect you to the device create page without further prompt.</div>
+</div>
+<div class="line-block">
+<div class="line">Device names are auto tagged as {USER_NAME}${HUB_NAME}${DEVICE_NAME}.</div>
+</div>
+<div class="line-block">
+<div class="line">‘$’ is used as a separator, instead if ‘/’, because ‘/’ is considered dangerous username in mqtt authentication check, and ‘/’ is necessary for mqtt topic authorization wildcard matching.</div>
+</div>
+<div class="line-block">
+<div class="line">The other “invisible” user interface is the MQTT pub/sub broker, equipped with an authentication-authorization plugin, plus a Json Web Token signature verification function (built with pyjwt and c-python connector inside the plugin). The 1883 and 8883 (MQTT+TLS, currently not opened yet) ports are exposed for publish and subscribe.</div>
+</div>
+<div class="line-block">
+<div class="line">MQTT connect requests mainly consist of five parts: username, password, topic, socket, pub or sub. For sellers: In the pub script, there’s nothing related to the seller himself. It was really the seller’s device that’s publishing, the device has a name, credential and permission. But of course, the devices are not alive, so the seller has to do everything for them.</div>
+</div>
 </div>
 
 
@@ -160,6 +175,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="buyers.html" class="btn btn-neutral float-right" title="FOR BUYERS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="req.html" class="btn btn-neutral float-left" title="REQUIREMENTS AND INSTALLATION" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
