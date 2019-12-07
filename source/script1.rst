@@ -1,5 +1,5 @@
 ===============================
-**MQTT with python**
+**I3 SDK Documentation**
 ===============================
 
 
@@ -20,10 +20,10 @@ Introduction
 
 | **Topic**: An UTF-8 string used by the clients and servers to send and receive messages.
 
-i3 Marketplace
+I3 Marketplace
 --------------------------------
 
-| Devices in i3 marketplace are registered under hubs, and also require valid input when creating. Invalid input will redirect you to the device create page without further prompt. 
+| Devices in I3 marketplace are registered under hubs, and also require valid input when creating. Invalid input will redirect you to the device create page without further prompt. 
 
 | Device names are auto tagged as {USER_NAME}${HUB_NAME}${DEVICE_NAME}. 
 

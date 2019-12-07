@@ -18,12 +18,11 @@
 # -- Project information -----------------------------------------------------
 
 project = 'i3sdk'
-copyright = '2019, Rutul Pandya'
+copyright = '2019, USC CCI'
 author = 'Rutul Pandya'
 
 # The full version, including alpha/beta/rc tags
 release = 'v1'
-
 
 
 #Add this line -----------------------------------------------------------------
@@ -31,16 +30,6 @@ master_doc = 'index'
 
 
 #Theme template-------------------------------------------------------
-
-import sphinx_rtd_theme
-
-extensions = [
-    ...
-    'sphinx_rtd_theme',
-]
-
-html_theme = "sphinx_rtd_theme"
-
 
 # -- General configuration ---------------------------------------------------
 
