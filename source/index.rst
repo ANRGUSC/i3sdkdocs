@@ -12,10 +12,3 @@ Welcome to I3SDK's documentation!
 
    script1.rst
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
