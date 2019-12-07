@@ -16,7 +16,6 @@ FOR SELLERS
 
 |  3. If your device is registered by an asymmetric key pair and you’ve provided your public key to I3, generate a Json Web Token claim and sign it with your private key (paired with the public key you provided to I3). Signature has to be performed using RS256, and right now only supports limited jwt fields. Specify an expire time for your token, after which it will be invalid for authentication. But no auto disconnection is performed when your token expires (you just can’t use this token to connect again). Directly use the token as the password for authentication. 
 
-| In order to generate the public and private key 
 | There’s no addition information you need to provide, such as how you registered your device. We’ll take care of everything, you just need to provide the necessary basic information. 
 
 | **Please don’t use your private key string as the password!** 

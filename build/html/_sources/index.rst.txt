@@ -7,7 +7,7 @@ Welcome to I3SDK's documentation!
 =================================
 
 .. toctree::
-   :maxdepth: 5
+   :maxdepth: 2
    :caption: Contents:
 
    intro.rst
