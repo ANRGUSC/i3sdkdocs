@@ -1,5 +1,5 @@
 ==========================================
-Requirements AND Installation
+Requirements and Installation
 ==========================================
 
 | Users need access to an I3 instance for publishing to and or subscribing from I3 data marketplace.
@@ -12,4 +12,4 @@ Requirements AND Installation
 
  	$ pip3 install paho-mqtt==1.3.1
 
-| Here we specify the version as 1.3.1 while installing.
+| Here we specify the version as 1.3.1 while installing. The Eclipse Paho project is a  great source of MQTT clients which contains implementations in C, Java, Javascript, Python (contributed from the mosquitto project), Lua, C++, embedded/minimal C, and Go. Link to '<https://www.eclipse.org/paho/>'_

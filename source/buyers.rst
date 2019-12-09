@@ -1,5 +1,5 @@
 ==========================
-FOR BUYERS
+Instructions for Buyers
 ==========================
 
 | In the sub script, it’s much easier! The subscriber is just the person, so just use your credential and username to subscribe to a topic. If you bought an actuator topic, just provide the same information and publish to the topic.
