@@ -1,5 +1,5 @@
 ==========================================
-REQUIREMENTS AND INSTALLATION
+Requirements AND Installation
 ==========================================
 
 | Users need access to an I3 instance for publishing to and or subscribing from I3 data marketplace.
