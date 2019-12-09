@@ -1,5 +1,5 @@
 ===================================
-FOR SELLERS
+Instructions for Sellers
 ===================================
 
 |  In the pub script, there’s nothing related to the seller himself. It was really the seller’s device that’s publishing, the device has a name, credential and permission. But of course, the devices are not alive, so the seller has to do everything for them. 
