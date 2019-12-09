@@ -4,8 +4,7 @@
 
 
 
-**Introduction**
-
+**INTRODUCTION**
 
 | MQTT is a machine-to-machine (M2M)/ “Internet of Things” connectivity protocol. MQTT stands for Message Queuing Telemetry Transport. It is a publish-subscribe-based messaging protocol. It works on top of the TCP/IP protocol.
 
