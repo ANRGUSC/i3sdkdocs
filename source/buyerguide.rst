@@ -27,11 +27,11 @@ The second field (up on the panel, right next to “I3 marketplace”) is called
 .. image:: Products.png
 
 
-Product detail
+Product Detail
 --------------
 If you want to view the details of a product, just click the blue link. On this page you’ll see the full name, product creator and other information. Products are restricted or unrestricted (as shown in above figures). For restricted products, you have to require access to the product. Only after the product creator approves your purchase will you be able to subscribe to it. Of course he can deny it. You’ll get a notification when the seller makes a decision. For unrestricted products, you can just add to cart and check out. Another attribute of products is “sensor type”. Three choices are “sensor”, “actuator” and “both”. As a buyer, if you buy a sensor topic, you get a subscribe permission; if you buy a non-sensor topic, you get a publish-subscribe permission.
 
-Subscribing credential and restricted products
+Subscribing Credential and Restricted Products
 ----------------------------------------------
 You’ll get your (personal, not specific to any product) 12-digit subscribing credential once you buy your first product. You will use it for ALL subscription requests (of course you still have to buy a product before you can subscribe to it). Below is what happens when you buy a restricted product (and if it’s the very first product you bought on the marketplace).
 
