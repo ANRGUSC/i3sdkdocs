@@ -12,4 +12,4 @@ First of all, install paho-mqtt-python, using pip as follows:
 
      $ pip3 install paho-mqtt==1.3.1
 
-Here we specify the version as 1.3.1 while installing. The Eclipse Paho project is an excellent source of MQTT clients, which contains implementations in C, Java, Javascript, Python (contributed from the mosquitto project), Lua, C++, embedded/minimal C, and Go. Link to '<https://www.eclipse.org/paho/>'_
+Here we specify the version as 1.3.1 while installing. The `Eclipse Paho <https://www.eclipse.org/paho/>`_ project is an excellent source of MQTT clients, which contains implementations in C, Java, Javascript, Python (contributed from the mosquitto project), Lua, C++, embedded/minimal C, and Go.
