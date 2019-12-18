@@ -12,6 +12,8 @@ After logging in, you’ll see a dashboard page, which consists of three parts -
 
 Apart from the above, the “add product” button on the up-right corner provides you with a quick way to create a product, but note that all products have to be created under existing hubs. So if you don’t have a hub yet, please register a hub first.
 
+.. image:: Login.png
+
 Products
 --------
 The second field (up on the panel, right next to “I3 marketplace”) is called “products”. This page shows all the products on the marketplace, except the ones that you created. You can explore the market and buy products from here.
