@@ -6,17 +6,26 @@ Signup
 ------
 All URLs of this platform require login, if you’re not logged in, you’ll be redirected to the login page. Sign up first before you log in. As indicted below, for now we haven’t enabled https, so please don’t use a password that’s the same as your other passwords.
 
+.. image:: Login.png
+
+The new users have to create an account by clicking "Don't have an account? Sign Up". A new user has to enter an username, email address, and password to set up an account. 
+
+.. image:: Signup.png
+
 Log in
 ------
 After logging in, you’ll see a dashboard page, which consists of three parts -- purchased products, your products and suggested products. As is suggested by the hints, the “purchased products” are the products that you (as a buyer) bought, the “my products” are products that you (as a seller) created, and the “suggested products” are the products recommended for you according to your preferences (as of today, we don’t have it yet, and it just shows all products on the marketplace, except yours).
 
 Apart from the above, the “add product” button on the up-right corner provides you with a quick way to create a product, but note that all products have to be created under existing hubs. So if you don’t have a hub yet, please register a hub first.
 
-.. image:: Login.png
+.. image:: Dashboard.png
 
 Products
 --------
 The second field (up on the panel, right next to “I3 marketplace”) is called “products”. This page shows all the products on the marketplace, except the ones that you created. You can explore the market and buy products from here.
+
+.. image:: Products.png
+
 
 Product detail
 --------------

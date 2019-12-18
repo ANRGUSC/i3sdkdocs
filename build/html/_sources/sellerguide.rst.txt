@@ -6,6 +6,7 @@ Hub
 ---
 Products and devices should be registered under a certain hub, so the first thing you should do is to create a hub. Navigate to the hub page on the upper panel, you’ll see a list of your current hubs. Click “create hub” to create a hub. The private/public is a hub attribute, if you want others to be able to view the details of your hub (devices and topics under it), choose public. Otherwise choose private. By default, in the same hub, all devices have permission to publish to all topics. No publish permissions across hubs. In the future, you’ll be able to assign fine-grained publish permissions for each device (maybe to topics outside its hub), but of course, still restricted to your own products. 
 
+.. image:: Create_hub.png
 
 The detail view of a hub is accessed by /hubs/{HUB_PRIMARY_KEY}, but for hub creators, buttons will be provided for them to see their hub details (see blue hub name, which is a link). When you try accessing the detailed view of a hub (by primary key), your permission will be checked. If you created this hub, you’ll see a page like this (left private, right public).
 
