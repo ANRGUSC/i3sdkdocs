@@ -5,6 +5,8 @@
 
 Welcome to I3 User Documentation
 =================================
+This documentation is meant for the users of I3 data marketplace. We recommend the users to follow this document to 
+create, manage, and buy data products from the I3 data marketplace. 
 
 .. toctree::
    :maxdepth: 2
