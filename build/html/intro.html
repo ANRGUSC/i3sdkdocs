@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>I3 User Documentation &mdash; i3sdk v1 documentation</title>
+  <title>Overview of I3 Data Marketplace &mdash; i3sdk v1 documentation</title>
   
 
   
@@ -82,10 +82,17 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>I3 User Documentation</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Overview of I3 Data Marketplace</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#terminologies">Terminologies</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="req.html">Requirements and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="i3market.html">I3 Marketplace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account.html">Account Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buyerguide.html">Buyer's Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="buyers.html">Instructions for Buyers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sellerguide.html">Seller's Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sellers.html">Instructions for Sellers</a></li>
 </ul>
 
@@ -132,7 +139,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li><strong>I3 User Documentation</strong></li>
+      <li><strong>Overview of I3 Data Marketplace</strong></li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -151,29 +158,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="i3-user-documentation">
-<h1><strong>I3 User Documentation</strong><a class="headerlink" href="#i3-user-documentation" title="Permalink to this headline">¶</a></h1>
-<p><strong>INTRODUCTION</strong></p>
-<div class="line-block">
-<div class="line">MQTT is a machine-to-machine (M2M)/ “Internet of Things” connectivity protocol. MQTT stands for Message Queuing Telemetry Transport. It is a publish-subscribe-based messaging protocol. It works on top of the TCP/IP protocol.</div>
+  <div class="section" id="overview-of-i3-data-marketplace">
+<h1><strong>Overview of I3 Data Marketplace</strong><a class="headerlink" href="#overview-of-i3-data-marketplace" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The I3 data marketplace is a community-driven IoT platform to allow the device owners to sell their application data to help the application developers. The users are required to follow the guidelines provided in this documentation to easily navigate
+through the frontend.</p>
 </div>
-<div class="line-block">
-<div class="line">The important terminologies in MQTT are as follows:</div>
-</div>
-<div class="line-block">
-<div class="line"><strong>Publisher</strong>: The one which publishes messages to the outer world.</div>
-</div>
-<div class="line-block">
-<div class="line"><strong>Subscriber</strong>: The one which receives messages that are intended for it.</div>
-</div>
-<div class="line-block">
-<div class="line"><strong>Client</strong>: A client can be either publisher or subscriber or both. That is a client publish a message and receive another message at the same time.</div>
-</div>
-<div class="line-block">
-<div class="line"><strong>Server/Broker</strong>: The one receives the messages published by the publisher first, even before the subscriber. Then the server publishes the messages to the subscribers after filtering the messages. Both the names server and broker mean the same entity.</div>
-</div>
-<div class="line-block">
-<div class="line"><strong>Topic</strong>: An UTF-8 string used by the clients and servers to send and receive messages.</div>
+<div class="section" id="terminologies">
+<h2>Terminologies<a class="headerlink" href="#terminologies" title="Permalink to this headline">¶</a></h2>
+<p><strong>Marketplace</strong>: The marketplace refers to an I3 instance made available by an organization, including a city or a community. An open-source version of I3 data marketplace software is available <a class="reference external" href="https://github.com/ANRGUSC/I3-SDK/tree/master">here</a>.</p>
+<p><strong>Seller</strong>: A seller is the owner of a device or the data, and he or she is willing to make the data available via the data marketplace.</p>
+<p><strong>Buyer</strong>: A buyer is the one who is buying data from the I3 data marketplace to create an application.</p>
+<p><strong>Broker</strong>: One of the core components of the I3 architecture is a data broker. The current version of I3 uses MQTT as a data broker, which publish-subscribe messaging protocol for the IoT.</p>
+<p><strong>Publisher</strong>: In the publish-subscribe messaging protocol, data producers are considered as a publisher. Each data producer is required to publish the data to the I3 data marketplace after creating the data product on the marketplace.</p>
+<p><strong>Subscriber</strong>: A subscriber is a data consumer. In the I3 data marketplace, the data buyers are required to subscribe to the data after purchasing the data product on the data marketplace.</p>
+<p><strong>Topic</strong>: The topic captures the metadata in a human-readable form. In the publish-subscribe communication model, the publisher and the subscriber exchange information with each other through topics. For example, a seller providing &quot;temperature&quot; data could name the topic as &quot;temperature.&quot; When a buyer is building a temperature monitoring application can buy data from &quot;temperature&quot; to get access to the temperature feed.</p>
 </div>
 </div>
 

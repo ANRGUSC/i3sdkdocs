@@ -1,20 +1,28 @@
-===============================
-**I3 User Documentation**
-===============================
+===================================
+**Overview of I3 Data Marketplace**
+===================================
 
 
-**INTRODUCTION**
+Introduction
+------------
+The I3 data marketplace is a community-driven IoT platform to allow the device owners to sell their application data to help the application developers. The users are required to follow the guidelines provided in this documentation to easily navigate 
+through the frontend.
 
-| MQTT is a machine-to-machine (M2M)/ “Internet of Things” connectivity protocol. MQTT stands for Message Queuing Telemetry Transport. It is a publish-subscribe-based messaging protocol. It works on top of the TCP/IP protocol.
 
-| The important terminologies in MQTT are as follows:
+Terminologies
+-------------
 
-| **Publisher**: The one which publishes messages to the outer world.
+**Marketplace**: The marketplace refers to an I3 instance made available by an organization, including a city or a community. An open-source version of I3 data marketplace software is available `here <https://github.com/ANRGUSC/I3-SDK/tree/master>`_.
 
-| **Subscriber**: The one which receives messages that are intended for it.
+**Seller**: A seller is the owner of a device or the data, and he or she is willing to make the data available via the data marketplace.
 
-| **Client**: A client can be either publisher or subscriber or both. That is a client publish a message and receive another message at the same time.
+**Buyer**: A buyer is the one who is buying data from the I3 data marketplace to create an application. 
 
-| **Server/Broker**: The one receives the messages published by the publisher first, even before the subscriber. Then the server publishes the messages to the subscribers after filtering the messages. Both the names server and broker mean the same entity.
+**Broker**: One of the core components of the I3 architecture is a data broker. The current version of I3 uses MQTT as a data broker, which publish-subscribe messaging protocol for the IoT.
 
-| **Topic**: An UTF-8 string used by the clients and servers to send and receive messages.
+**Publisher**: In the publish-subscribe messaging protocol, data producers are considered as a publisher. Each data producer is required to publish the data to the I3 data marketplace after creating the data product on the marketplace. 
+
+**Subscriber**: A subscriber is a data consumer. In the I3 data marketplace, the data buyers are required to subscribe to the data after purchasing the data product on the data marketplace.
+
+**Topic**: The topic captures the metadata in a human-readable form. In the publish-subscribe communication model, the publisher and the subscriber exchange information with each other through topics. For example, a seller providing "temperature" data could name the topic as "temperature." When a buyer is building a temperature monitoring application can buy data from "temperature" to get access to the temperature feed.
+
