@@ -13,7 +13,9 @@ Welcome to I3 User Documentation
    intro.rst
    req.rst
    i3market.rst
+   buyerguide.rst
    buyers.rst
+   sellerguide.rst
    sellers.rst
 
 
