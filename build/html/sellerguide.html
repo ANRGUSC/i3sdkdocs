@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Buyer&#39;s Guide &mdash; i3sdk v1 documentation</title>
+  <title>Seller&#39;s Guide &mdash; i3sdk v1 documentation</title>
   
 
   
@@ -87,18 +87,15 @@
 <li class="toctree-l1"><a class="reference internal" href="i3market.html">I3 Marketplace</a></li>
 <li class="toctree-l1"><a class="reference internal" href="buyerguide.html">Buyer's Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="buyers.html">Instructions for Buyers</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Buyer's Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#signup">Signup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#log-in">Log in</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#products">Products</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#product-detail">Product detail</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#subscribing-credential-and-restricted-products">Subscribing credential and restricted products</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#map-view">Map view</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rest-api">REST API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#allowed-query-params">Allowed Query Params:</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#rating">Rating</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Seller's Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hub">Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#invalid-form">Invalid Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#naming">Naming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#product-create">Product Create</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sensor-type">Sensor Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#restricted-product">Restricted Product</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deleting-a-device-or-product">Deleting a Device or Product</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#device-registration">Device Registration</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sellers.html">Instructions for Sellers</a></li>
@@ -147,7 +144,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Buyer's Guide</li>
+      <li>Seller's Guide</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -166,68 +163,49 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="buyer-s-guide">
-<h1>Buyer's Guide<a class="headerlink" href="#buyer-s-guide" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="signup">
-<h2>Signup<a class="headerlink" href="#signup" title="Permalink to this headline">¶</a></h2>
-<p>All URLs of this platform require login, if you’re not logged in, you’ll be redirected to the login page. Sign up first before you log in. As indicted below, for now we haven’t enabled https, so please don’t use a password that’s the same as your other passwords.</p>
+  <div class="section" id="seller-s-guide">
+<h1>Seller's Guide<a class="headerlink" href="#seller-s-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="hub">
+<h2>Hub<a class="headerlink" href="#hub" title="Permalink to this headline">¶</a></h2>
+<p>Invalid FormLL products and devices should be registered under a certain hub, so the first thing you should do is to create a hub. Navigate to the hub page on the upper panel, you’ll see a list of your current hubs. Click “create hub” to create a hub. The private/public is a hub attribute, if you want others to be able to view the details of your hub (devices and topics under it), choose public. Otherwise choose private. By default, in the same hub, all devices have permission to publish to all topics. No publish permissions across hubs. In the future, you’ll be able to assign fine-grained publish permissions for each device (maybe to topics outside its hub), but of course, still restricted to your own products.</p>
+<p>The detail view of a hub is accessed by /hubs/{HUB_PRIMARY_KEY}, but for hub creators, buttons will be provided for them to see their hub details (see blue hub name, which is a link). When you try accessing the detailed view of a hub (by primary key), your permission will be checked. If you created this hub, you’ll see a page like this (left private, right public).</p>
+<p>You can use the buttons to create or delete devices, and create or delete or edit products.</p>
+<p>When you’re not the hub creator, if you try to access a private hub detail view, you see this</p>
+<p>If you try to access the detail view of a public hub, you see this</p>
+<p>Almost the same as the view page of that of a hub creator, but there’s no buttons provided for you because you’re viewing someone else’s hub, so you can’t do things like delete etc. Of course, buttons are just a visible access to URLS, so what if someone tries to delete a device or product that doesn’t belong to him by entering URLs?</p>
+<p>He’ll see this.</p>
+<p>Only creator gets to make changes to hubs, products and devices. NOTE: as of today, the product edit view doesn’t have permission control yet, so anybody can edit any product by using the edit URL.</p>
 </div>
-<div class="section" id="log-in">
-<h2>Log in<a class="headerlink" href="#log-in" title="Permalink to this headline">¶</a></h2>
-<p>After logging in, you’ll see a dashboard page, which consists of three parts -- purchased products, your products and suggested products. As is suggested by the hints, the “purchased products” are the products that you (as a buyer) bought, the “my products” are products that you (as a seller) created, and the “suggested products” are the products recommended for you according to your preferences (as of today, we don’t have it yet, and it just shows all products on the marketplace, except yours).</p>
-<p>Apart from the above, the “add product” button on the up-right corner provides you with a quick way to create a product, but note that all products have to be created under existing hubs. So if you don’t have a hub yet, please register a hub first.</p>
+<div class="section" id="invalid-form">
+<h2>Invalid Form<a class="headerlink" href="#invalid-form" title="Permalink to this headline">¶</a></h2>
+<p>If there’s anything invalid in your create form, you’ll be redirected to the same create page without further notice. Please read the instructions carefully, such as “no duplicate product names” and “name must be at least 4 digits”.</p>
 </div>
-<div class="section" id="products">
-<h2>Products<a class="headerlink" href="#products" title="Permalink to this headline">¶</a></h2>
-<p>The second field (up on the panel, right next to “I3 marketplace”) is called “products”. This page shows all the products on the marketplace, except the ones that you created. You can explore the market and buy products from here.</p>
+<div class="section" id="naming">
+<h2>Naming<a class="headerlink" href="#naming" title="Permalink to this headline">¶</a></h2>
+<p>When registering, just provide an alpha-numeric name for your hub (also a requirement for products and devices), and the final hub name will be automatically tagged as {USER_NAME}/{HUB_NAME}. NOTE, no duplicate hub names for a single user is allowed. If you registered a hub1, and did it again, you will be automatically redirected to the hub_create view page without extra prompt, and no operation will be performed on the system (as is mentioned above).</p>
 </div>
-<div class="section" id="product-detail">
-<h2>Product detail<a class="headerlink" href="#product-detail" title="Permalink to this headline">¶</a></h2>
-<p>If you want to view the details of a product, just click the blue link. On this page you’ll see the full name, product creator and other information. Products are restricted or unrestricted (as shown in above figures). For restricted products, you have to require access to the product. Only after the product creator approves your purchase will you be able to subscribe to it. Of course he can deny it. You’ll get a notification when the seller makes a decision. For unrestricted products, you can just add to cart and check out. Another attribute of products is “sensor type”. Three choices are “sensor”, “actuator” and “both”. As a buyer, if you buy a sensor topic, you get a subscribe permission; if you buy a non-sensor topic, you get a publish-subscribe permission.</p>
+<div class="section" id="product-create">
+<h2>Product Create<a class="headerlink" href="#product-create" title="Permalink to this headline">¶</a></h2>
+<p>Products have to be created inside a hub, and a create button is provided inside hub detail view, and also in the dashboard. They both point to the same URL /products/create.</p>
+<p>When creating a product, no duplicate product names inside a hub will be allowed, and the hub name has to be an existing one (eg, for usr1/hub1, don’t write usr1/hub1, write only hub1. This is to prevent usr2 from registering a hub that starts with usr1/. Same for devices and products). If these conditions are not met, you will be redirected to the product create page without further prompt. When creating a product, the final product name is automatically tagged as {USER_NAME}/{HUB_NAME}/{PRODUCT_NAME}. This is to make sure that all product names are unique and structured. Detail_view of all products are accessible to all users (login-required), they can be accessed from either marketplace or product link, or  /products/{PRIMARY_KEY} (such as /products/1/) or /products/ {PRODUCT_SLUG} (such as /products/usr11hub1topic1/). Also, you can provide an optional location for your product so that it’s easier for the buyers to check it out.</p>
 </div>
-<div class="section" id="subscribing-credential-and-restricted-products">
-<h2>Subscribing credential and restricted products<a class="headerlink" href="#subscribing-credential-and-restricted-products" title="Permalink to this headline">¶</a></h2>
-<p>You’ll get your (personal, not specific to any product) 12-digit subscribing credential once you buy your first product. You will use it for ALL subscription requests (of course you still have to buy a product before you can subscribe to it). Below is what happens when you buy a restricted product (and if it’s the very first product you bought on the marketplace).</p>
-<p>Now let’s log in as Matt and approve the purchase.</p>
+<div class="section" id="sensor-type">
+<h2>Sensor Type<a class="headerlink" href="#sensor-type" title="Permalink to this headline">¶</a></h2>
+<p>Sensor’ means buyer only gets to subscribe to the topic, ‘actuator/both’ means buyer can also publish to this topic. Depends on whether you want the buyer to have publishing permission to your topic.</p>
 </div>
-<div class="section" id="map-view">
-<h2>Map view<a class="headerlink" href="#map-view" title="Permalink to this headline">¶</a></h2>
-<p>You can view products in both list and map (google map API key).</p>
-<p>On any of the marks you can check out the details of a product.</p>
+<div class="section" id="restricted-product">
+<h2>Restricted Product<a class="headerlink" href="#restricted-product" title="Permalink to this headline">¶</a></h2>
+<p>If this box is checked, anyone who bought this product will prompt you a notification and a request, and you can choose to approve or decline. Buyer will get the feedback as notification. Approve/decline is using ajax, and when approved, buyer’s name will be put into acls table for authorization.</p>
+<p>Buyer of a restricted product sees this</p>
 </div>
-<div class="section" id="rest-api">
-<h2>REST API<a class="headerlink" href="#rest-api" title="Permalink to this headline">¶</a></h2>
-<p>All API endpoints require token authentication (auto generate when you click API key on up-right drop-down panel). Currently we only allow get query for products.
-SHELL command:
-curl -X GET -H 'Authorization: Token {YOUR_API_KEY}' '<a class="reference external" href="http:/">http:/</a>/{HOST_IP}:{PORT}/api/product/?{QUERY_NAME}={VALUE}&amp;{QUERY_NAME}={VALUE}&amp;...'
-(the above query params are using AND logic, in case you want to have multiple restrictions on return object)</p>
-<div class="section" id="allowed-query-params">
-<h3>Allowed Query Params:<a class="headerlink" href="#allowed-query-params" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>pk : return product with pk</p></li>
-<li><p>name : return product with name</p></li>
-</ul>
-<ol class="arabic simple">
-<li><p>seller : get a list of products this guy sells</p></li>
-<li><p>sensor_type : sensor, actuator or both</p></li>
-<li><p>restricted_active  : 0 for unrestricted products, 1 for restricted</p></li>
-<li><p>hub : filter by hub name</p></li>
-<li><p>description_contains : return products whose description contain your input query (such as air quality). NOTE: use %20 if you want to input space, eg air%20quality</p></li>
-</ol>
-<ol class="arabic simple">
-<li><p>search : return any product whose SELLER or HUB or NAME or DESCRIPTION contain your input search query</p></li>
-</ol>
+<div class="section" id="deleting-a-device-or-product">
+<h2>Deleting a Device or Product<a class="headerlink" href="#deleting-a-device-or-product" title="Permalink to this headline">¶</a></h2>
+<p>When seller deletes a device, only himself is notified; but when he deletes a product (which is NOT supposed to be the usual circumstance), all buyers of this product are notified. Of course, all buyers lose access to this topic, but their personal buying credential remain unchanged. As I’ve mentioned before, it’s specific to buyers, not products.</p>
 </div>
-</div>
-<div class="section" id="rating">
-<h2>Rating<a class="headerlink" href="#rating" title="Permalink to this headline">¶</a></h2>
-<p>In the product detail page there’s a rating function as shown above.
-GET operation only requires login, while POST operation comes with mutiple permission check:
-* if request user is not logged in, return fail
-* if request user is creator of request product, return fail (You can't rate your own product)
-* if request user already rated the product, return fail (even if he bought it more than once)
-* everybody (except the seller) can rate the product (once and for all, only ONCE)
-* product rating have two values: Overall Rating (average by all raters) and Verified Rating (average by buyers). While now at my instance, the overall rating is displayed, we can switch to the mode that only display the average rating of those who actually bought the product. So even though everybody can rate, we can still keep track of the actual score (currently not fully supported though).</p>
+<div class="section" id="device-registration">
+<h2>Device Registration<a class="headerlink" href="#device-registration" title="Permalink to this headline">¶</a></h2>
+<p>Devices are registered under hubs, and also require valid input when creating. Invalid input will redirect you to the device create page without further prompt. Device names are auto tagged as {USER_NAME}${HUB_NAME}${DEVICE_NAME}. ‘$’ is used as a separator, instead if ‘/’, because ‘/’ is considered dangerous username in mqtt authentication check, and ‘/’ is necessary for mqtt topic authorization wildcard matching.</p>
+<p>Two methods to register devices: api key and asymmetric key pairs. For the former, enter a password for your device, and it will be np-hashed in database. For the latter, generate a RS key pair using openssl, open the public key file, and get rid of all characters that are not the key body (including ‘n’s and “---BEGIN PUBLIC KEY---” and “---END PUBLIC KEY---”), and copy it to i3. Sellers have no credentials for themselves (unless they buy products and act as buyers), but they create credentials for each of their registered devices (which is the password or public key he enters).</p>
 </div>
 </div>
 
