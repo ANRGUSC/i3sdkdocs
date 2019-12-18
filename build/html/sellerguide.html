@@ -189,6 +189,7 @@
 <h2>Product Create<a class="headerlink" href="#product-create" title="Permalink to this headline">¶</a></h2>
 <p>Products have to be created inside a hub, and a create button is provided inside hub detail view, and also in the dashboard. They both point to the same URL /products/create.</p>
 <p>When creating a product, no duplicate product names inside a hub will be allowed, and the hub name has to be an existing one (eg, for usr1/hub1, don’t write usr1/hub1, write only hub1. This is to prevent usr2 from registering a hub that starts with usr1/. Same for devices and products). If these conditions are not met, you will be redirected to the product create page without further prompt. When creating a product, the final product name is automatically tagged as {USER_NAME}/{HUB_NAME}/{PRODUCT_NAME}. This is to make sure that all product names are unique and structured. Detail_view of all products are accessible to all users (login-required), they can be accessed from either marketplace or product link, or  /products/{PRIMARY_KEY} (such as /products/1/) or /products/ {PRODUCT_SLUG} (such as /products/usr11hub1topic1/). Also, you can provide an optional location for your product so that it’s easier for the buyers to check it out.</p>
+<img alt="_images/Create_product.png" src="_images/Create_product.png" />
 </div>
 <div class="section" id="sensor-type">
 <h2>Sensor Type<a class="headerlink" href="#sensor-type" title="Permalink to this headline">¶</a></h2>
@@ -206,6 +207,7 @@
 <div class="section" id="device-registration">
 <h2>Device Registration<a class="headerlink" href="#device-registration" title="Permalink to this headline">¶</a></h2>
 <p>Devices are registered under hubs, and also require valid input when creating. Invalid input will redirect you to the device create page without further prompt. Device names are auto tagged as {USER_NAME}${HUB_NAME}${DEVICE_NAME}. ‘$’ is used as a separator, instead if ‘/’, because ‘/’ is considered dangerous username in mqtt authentication check, and ‘/’ is necessary for mqtt topic authorization wildcard matching.</p>
+<img alt="_images/Create_device.png" src="_images/Create_device.png" />
 <p>Two methods to register devices: api key and asymmetric key pairs. For the former, enter a password for your device, and it will be np-hashed in database. For the latter, generate a RS key pair using openssl, open the public key file, and get rid of all characters that are not the key body (including ‘n’s and “---BEGIN PUBLIC KEY---” and “---END PUBLIC KEY---”), and copy it to i3. Sellers have no credentials for themselves (unless they buy products and act as buyers), but they create credentials for each of their registered devices (which is the password or public key he enters).</p>
 </div>
 </div>
