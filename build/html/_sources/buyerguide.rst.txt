@@ -46,9 +46,12 @@ On any of the marks you can check out the details of a product.
 REST API
 --------
 All API endpoints require token authentication (auto generate when you click API key on up-right drop-down panel). Currently we only allow get query for products.
-SHELL command:
-curl -X GET -H 'Authorization: Token {YOUR_API_KEY}' 'http://{HOST_IP}:{PORT}/api/product/?{QUERY_NAME}={VALUE}&{QUERY_NAME}={VALUE}&...'
-(the above query params are using AND logic, in case you want to have multiple restrictions on return object)
+
+.. code-block:: bash
+
+	curl -X GET -H 'Authorization: Token {YOUR_API_KEY}' 'http://{HOST_IP}:{PORT}/api product/?{QUERY_NAME}={VALUE}&{QUERY_NAME}={VALUE}&...'
+
+The above query parameters are using AND logic.
 
 Allowed Query Params:
 ===============================

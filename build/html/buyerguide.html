@@ -202,10 +202,11 @@
 </div>
 <div class="section" id="rest-api">
 <h2>REST API<a class="headerlink" href="#rest-api" title="Permalink to this headline">¶</a></h2>
-<p>All API endpoints require token authentication (auto generate when you click API key on up-right drop-down panel). Currently we only allow get query for products.
-SHELL command:
-curl -X GET -H 'Authorization: Token {YOUR_API_KEY}' '<a class="reference external" href="http:/">http:/</a>/{HOST_IP}:{PORT}/api/product/?{QUERY_NAME}={VALUE}&amp;{QUERY_NAME}={VALUE}&amp;...'
-(the above query params are using AND logic, in case you want to have multiple restrictions on return object)</p>
+<p>All API endpoints require token authentication (auto generate when you click API key on up-right drop-down panel). Currently we only allow get query for products.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X GET -H <span class="s1">&#39;Authorization: Token {YOUR_API_KEY}&#39;</span> <span class="s1">&#39;http://{HOST_IP}:{PORT}/api product/?{QUERY_NAME}={VALUE}&amp;{QUERY_NAME}={VALUE}&amp;...&#39;</span>
+</pre></div>
+</div>
+<p>The above query parameters are using AND logic.</p>
 <div class="section" id="allowed-query-params">
 <h3>Allowed Query Params:<a class="headerlink" href="#allowed-query-params" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
