@@ -36,7 +36,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="I3 Marketplace" href="i3market.html" />
-    <link rel="prev" title="I3 User Documentation" href="intro.html" /> 
+    <link rel="prev" title="Overview of I3 Data Marketplace" href="intro.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -82,10 +82,13 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="intro.html"><strong>I3 User Documentation</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Overview of I3 Data Marketplace</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Requirements and Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="i3market.html">I3 Marketplace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account.html">Account Creation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buyerguide.html">Buyer's Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="buyers.html">Instructions for Buyers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sellerguide.html">Seller's Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sellers.html">Instructions for Sellers</a></li>
 </ul>
 
@@ -153,23 +156,15 @@
             
   <div class="section" id="requirements-and-installation">
 <h1>Requirements and Installation<a class="headerlink" href="#requirements-and-installation" title="Permalink to this headline">¶</a></h1>
-<div class="line-block">
-<div class="line">Users need access to an I3 instance for publishing to and or subscribing from I3 data marketplace.</div>
-</div>
-<div class="line-block">
-<div class="line">Paho-mqtt-python is a Python implementation of MQTT and we will use python to subscribe and publish messages.</div>
-</div>
-<div class="line-block">
-<div class="line">First of all, install paho-mqtt-python, using pip as follows:</div>
-</div>
+<p>To follow the instructions in this documentation, users need access to an I3 instance. And, the data marketplace frontend has been tested on browsers such as Chrome and Firefox.</p>
+<p>The sellers and buyers are required to publish and subscribe to data, respectively. For this process, we recommend the users to use an MQTT client. Paho-MQTT-python is a Python implementation of MQTT. We provide sample publish-subscribe scripts for the I3 users: <a class="reference external" href="https://github.com/ANRGUSC/I3-SDK/tree/master">I3-SDK</a>.</p>
+<p>First of all, install paho-mqtt-python, using pip as follows:</p>
 <blockquote>
 <div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip3 install paho-mqtt<span class="o">==</span><span class="m">1</span>.3.1
 </pre></div>
 </div>
 </div></blockquote>
-<div class="line-block">
-<div class="line">Here we specify the version as 1.3.1 while installing. The Eclipse Paho project is a  great source of MQTT clients which contains implementations in C, Java, Javascript, Python (contributed from the mosquitto project), Lua, C++, embedded/minimal C, and Go. Link to '&lt;<a class="reference external" href="https://www.eclipse.org/paho/">https://www.eclipse.org/paho/</a>&gt;'_</div>
-</div>
+<p>Here we specify the version as 1.3.1 while installing. The Eclipse Paho project is an excellent source of MQTT clients, which contains implementations in C, Java, Javascript, Python (contributed from the mosquitto project), Lua, C++, embedded/minimal C, and Go. Link to '&lt;<a class="reference external" href="https://www.eclipse.org/paho/">https://www.eclipse.org/paho/</a>&gt;'_</p>
 </div>
 
 
@@ -183,7 +178,7 @@
         <a href="i3market.html" class="btn btn-neutral float-right" title="I3 Marketplace" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="intro.html" class="btn btn-neutral float-left" title="I3 User Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="intro.html" class="btn btn-neutral float-left" title="Overview of I3 Data Marketplace" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

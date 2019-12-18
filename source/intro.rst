@@ -1,5 +1,5 @@
 ===================================
-**Overview of I3 Data Marketplace**
+Overview of I3 Data Marketplace
 ===================================
 
 
