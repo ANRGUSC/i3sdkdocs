@@ -16,9 +16,8 @@ create, manage, and buy data products from the I3 data marketplace.
    req.rst
    i3market.rst
    account.rst
-   buyerguide.rst
-   buyers.rst
    sellerguide.rst
-   sellers.rst
+   buyerguide.rst
+   mqtt.rst
 
 
